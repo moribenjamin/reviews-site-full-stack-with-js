@@ -1,4 +1,4 @@
-package reviewssitefullstack;
+package reviewssitefullstackwithjs;
 
 import javax.annotation.Resource;
 

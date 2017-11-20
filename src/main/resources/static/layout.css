@@ -2,8 +2,9 @@
 	
 }
 .container {
-	 display: grid;
-    grid-template-columns: 2fr, 1fr, 1fr;
+	display: grid;
+    grid-template-columns: 1fr, 2fr 2fr;
+    grid-template-rows: 100px auto 100px;
     margin: 0 auto;
     max-width: 1000px;
     padding: 1rem;
@@ -48,7 +49,7 @@ ul {
 	display: flex;
 	flex: 1 33.333%;
 	width: 100%;
-	grid-column: 1 / span 2, 3 / span 1;
+	grid-column: 1 / span 3, 3 / span 1;
 }
 #add-course {
 	grid-column: 1 / span 2;
@@ -60,6 +61,10 @@ ul {
 
 .main-section {
 	display: flex;
-	margin-right: 5rem;
+	flex: 1 33.333%;'
+	padding: 1rem;
 }
+	.main-section:first-child {
+		margin-right: 1rem;
 	
+	}

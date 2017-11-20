@@ -1,4 +1,4 @@
-package reviewssitefullstack;
+package reviewssitefullstackwithjs;
 
 import org.springframework.data.repository.CrudRepository;
 

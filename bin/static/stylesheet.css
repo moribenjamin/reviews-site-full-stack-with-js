@@ -1,6 +1,8 @@
 html {
 	color: white;
 	background-image: url('../images/wallpaper4.png');
+	box-sizing: border-box;
+	
 }
 
 h1 {
@@ -33,7 +35,7 @@ h2 a:hover {
 	color: red;
 }
 
-}
+
 div p {
 	font-size: 300%;
 	font-style: italic;

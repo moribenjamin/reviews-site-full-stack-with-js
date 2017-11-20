@@ -1,4 +1,4 @@
-package reviewssitefullstack;
+package reviewssitefullstackwithjs;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -72,4 +72,14 @@ public class Review {
 		return tags;
 
 	}
+
+	public void addTagName(Tag tag) {
+		tags.add(tag);
+		// TODO Auto-generated method stub
+	}
+
+	public void removeTag(Tag tag) {
+		tags.remove(tag);
+	}
+
 }

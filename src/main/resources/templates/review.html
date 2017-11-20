@@ -23,37 +23,47 @@
 	</header>
 	<section class="main-section">
 	<div>
-		<h2 th:text="${'Category: ' + review.category}"></h2>
-		<h2 th:text="${'Name: ' + review.name}"></h2>
-		<h2 th:text="${'Review Date: ' + review.date}"></h2>
+		<h3 th:text="${'Category: ' + review.category}"></h3>
+		<h3 th:text="${'Name: ' + review.name}"></h3>
+		<h3 th:text="${'Review Date: ' + review.date}"></h3>
 	</div>
 	<div>
-		<h2 th:text="${'Review: ' + review.content}"></h2>
+		<h3 th:text="${'Review: ' + review.content}"></h3>
 	</div>
 	<div>
 		<img th:src="${review.imageUrl}" alt="This is a picture of a pair of shoes"></img>		
-		<h2 th:text="${'Tags: ' + review.tags}"></h2>
+		<h3 th:text="${'Tags: ' + review.tags}"></h3>
 	</div>
 	</section>
 	
 	<div class="form">
-	<form id="add-course">
+	<form method="POST">
 		<label>Enter a new tag name: </label>
-		<input type="text" name="name" />
+		<input name="id" type="hidden" th:value="${review.reviewId}" />
+		<input type="text" name="tagName" />
 		<button th:formaction="@{/add-tag}">add</button>
 	</form>
 			
-	<form id="remove-course">
-		<label>Enter id of the tag you wish to remove: </label>
-		<input type="text" name="id" />
+	<form method="POST">
+		<label>Enter tag name you wish to remove: </label>
+		<input name="id" type="hidden" th:value="${review.reviewId}" />
+		<input type="text" name="tagName" />
 		<button th:formaction="@{/remove-tag}">delete</button>
 	</form>	
 	</div>
-	
+	<div class="user-comments" id="comments">
+			<div class="commentSec">
+				<label>Enter any comments you would like to add to this
+				Review: </label> <input id="commentArea" type="text"
+				onfocus="this.value='';" placeholder="Enter A Comment" /> <input
+				type="button" value="Add Comment" id="add" />
+			</div>
+	</div>
 	<footer>
 		<p>&copy; 2017 Mori Benjamin</p>
 		<a href="http://localhost:8080/reviews">Back to home</a>
 	</footer>
 	</div>
+<script src="/js/app.js"></script>	
 </body>
 </html>

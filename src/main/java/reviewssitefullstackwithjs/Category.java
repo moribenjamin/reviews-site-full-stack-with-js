@@ -1,4 +1,4 @@
-package reviewssitefullstack;
+package reviewssitefullstackwithjs;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -43,6 +43,6 @@ public class Category {
 
 	@Override
 	public String toString() {
-		return "Category: " + categoryName;
+		return categoryName;
 	}
 }
