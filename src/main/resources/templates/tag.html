@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>A Tag</title>
+<link rel="stylesheet" type="text/css" href="/normalize.css" />
+<link rel="stylesheet" type="text/css" href="/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="/layout.css"/>
+</head>
+<body>
+	 <div class="container">
+	<header>
+		<h1>Mori's Real Highfalutin Toe-Nail-Bittin' Shoe Review!!!</h1>	
+		<nav>
+			<ul>
+				<li><a href="/reviews">Reviews</a></li>
+				<li><a href="/categories">Categories</a></li>
+				<li><a href="/tags">Tags</a></li>
+			</ul>
+		</nav>		
+	</header>
+	<div>
+		<h2 th:text="${tag.tagName}"></h2>
+	</div>
+
+	<div th:each="currentTag: ${tag.reviewsByTag}"
+		th:text="${currentTag.name}">
+		<a th:href="@{/currentReview(id=${currentReview.reviewId})}"
+			th:text="${currentReview.name}"></a>
+	</div>
+	<footer>
+		<p>&copy; 2017 Mori Benjamin</p>
+		<a href="http://localhost:8080/reviews">Back to home</a>
+	</footer>
+	</div>
+</body>
+</html>

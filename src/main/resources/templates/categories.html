@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>The Real Shoe Review</title>
+<link rel="stylesheet" type="text/css" href="/normalize.css" />
+<link rel="stylesheet" type="text/css" href="/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="/layout.css"/>
+</head>
+
+<body>
+	 <div class="container">
+	<header>
+		<h1>Mori's Real Highfalutin Toe-Nail-Bittin' Shoe Review!!!</h1>	
+		<nav>
+			<ul>
+				<li><a href="/reviews">Reviews</a></li>
+				<li><a href="/categories">Categories</a></li>
+				<li><a href="/tags">Tags</a></li>
+			</ul>
+		</nav>	
+	</header>
+
+	<div>
+		<h2>Here Are The Categories!</h2>
+		<img src="/images/categories.jpg" alt="categories"></img>
+	</div>
+
+	<div th:each="category: ${categories}">
+		<h2>
+			<a th:href="@{/category(id=${category.categoryId})}"
+				th:text="${category.categoryName}"></a>
+		</h2>
+	</div>>
+	<footer>
+		<p>&copy; 2017 Mori Benjamin</p>
+		<a href="http://localhost:8080/reviews">Back to home</a>
+	</footer>
+	</div>
+</body>
+</html>

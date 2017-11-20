@@ -1,0 +1,54 @@
+html {
+	color: white;
+	background-image: url('../images/wallpaper4.png');
+}
+
+h1 {
+	color: white;
+}
+
+header nav ul li a {
+	color: white;
+}
+
+header nav ul li a:hover {
+	color: red;
+}
+
+img {
+	float: right;
+	margin: 0 0 0 15px;
+}
+
+h2 {
+	color: white;
+	line-height: 2;
+}
+
+h2 a {
+	color: white;
+}
+
+h2 a:hover {
+	color: red;
+}
+
+}
+div p {
+	font-size: 300%;
+	font-style: italic;
+}
+
+footer p {
+	color: white;
+	font-size: 100%;
+	font-style: italic;
+}
+
+footer a {
+	color: white;
+}
+
+footer a:hover {
+	color: red;
+}
